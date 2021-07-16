@@ -1,0 +1,1 @@
+These notebooks are derived from [Dive Into Deep Learning](http://d2l.ai/).
