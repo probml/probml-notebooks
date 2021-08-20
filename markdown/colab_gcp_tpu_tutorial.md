@@ -1,8 +1,12 @@
-# List of tutorials and tricks on Google Cloud Platform and TPUs
+# Tips and tricks on using Colab, Google Cloud Platform and TPUs
 
-## List of tutorials
-- [Colab on how to use Google Cloud Storage from Colab](https://github.com/probml/probml-notebooks/blob/main/notebooks/GCS_demo_v2.ipynb)
-- [Colab on how to use TPUs from Colab](https://github.com/probml/probml-notebooks/blob/main/notebooks/tpu_colab_tutorial.ipynb)
+Authors: [murphyk](https://github.com/murphyk), [mjsML](https://github.com/mjsML), [gerdm](https://github.com/gerdm), et al  2021.
+
+## Tutorials in notebook format
+
+* [Colab tutorial](https://github.com/probml/probml-notebooks/blob/main/notebooks/colab_intro.ipynb)
+* [Using Google Cloud Storage from Colab](https://github.com/probml/probml-notebooks/blob/main/notebooks/GCS_demo_v2.ipynb)
+* [Using TPU VMs from Colab](https://github.com/probml/probml-notebooks/blob/main/notebooks/tpu_colab_tutorial.ipynb)
 
 
 ## Miscellaneous tricks
