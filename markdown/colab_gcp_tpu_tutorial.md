@@ -10,11 +10,12 @@ Authors: [murphyk](https://github.com/murphyk), [mjsML](https://github.com/mjsML
 * [Accessing colab machine via ssh](https://colab.research.google.com/github/probml/probml-notebooks/blob/main/notebooks/ssh_tunnels_and_how_to_dig_them.ipynb)
 
 
-## Using GCP directly
+## Using GCP via SSH + VScode
 
 An alternative to using Colab is to get an account on GCP; this can provide much more compute power, and gives you persistent storage.
 Follow the setup instructions in the section called "Gcloud VM" in [this colab](https://colab.research.google.com/github/probml/probml-notebooks/blob/main/notebooks/ssh_tunnels_and_how_to_dig_them.ipynb#scrollTo=TLtWT8vn-Eyh). Now you can connect to your Gcloud account via VScode:
-just type in the external IP address into the green icon on the lower left corner. Once connected, you can clone your github repo, edit your source code in a proper IDE, and open a jupyter notebook for interactive development. When you're done, save it all back to github. See the screenshot below for an example.
+just type in the external IP address into the green icon on the lower left corner. Once connected, you can clone your github repo, edit your source code in a proper IDE, and open a jupyter notebook for interactive development. (Use `%run foo.py` to run your script file; when it's done, all the global variables it created will be accessible from the notebook.) When you're done developing, save all your code back to github. (Artefacts can be stored using Google Cloud storage buckets.)
+See the screenshot below for an example.
 ![](https://github.com/probml/probml-notebooks/raw/main/images/vscode-ssh.png)
 
 
