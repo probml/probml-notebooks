@@ -1,6 +1,6 @@
 # Tips and tricks on using Colab, Google Cloud Platform and TPUs
 
-Authors: [murphyk](https://github.com/murphyk), [mjsML](https://github.com/mjsML), [gerdm](https://github.com/gerdm), et al  2021.
+Authors: [murphyk](https://github.com/murphyk), [mjsML](https://github.com/mjsML), [gerdm](https://github.com/gerdm), summer  2021.
 
 ## Colab tutorials 
 
@@ -17,7 +17,6 @@ Follow the setup instructions in the section called "Gcloud VM" in [this colab](
 just type in the external IP address into the green icon on the lower left corner. Once connected, you can clone your github repo, edit your source code in a proper IDE, and open a jupyter notebook for interactive development. When you're done, save it all back to github. See the screenshot below for an example.
 ![](https://github.com/probml/probml-notebooks/raw/main/images/vscode-ssh.png)
 
-#![](https://github.com/probml/probml-notebooks/raw/main/images/github-vscode-browser.png)
 
 ## Miscellaneous tricks
 
