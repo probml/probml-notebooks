@@ -100,4 +100,5 @@ There are also many other JAX libraries for tasks that are not about defining DN
 |[GTP-J](https://arankomatsuzaki.wordpress.com/2021/06/04/gpt-j/)| Open source version of GPT-3 using JAX and TPU v3-256.|
 |[CLIP-Jax](https://github.com/kingoflolz/CLIP_JAX) | Jax wrapper for inference using pre-trained OpenAI CLIP model |
 |[Scenic](https://github.com/google-research/scenic])| Computer vision library |
+|[Pix](https://github.com/deepmind/dm_pix)| Image pre-processing library|
 
