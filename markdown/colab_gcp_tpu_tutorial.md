@@ -13,4 +13,16 @@ Authors: [murphyk](https://github.com/murphyk), [mjsML](https://github.com/mjsML
 * [Using GCP/ TPU VMs via SSH + VSCode](https://github.com/probml/probml-notebooks/blob/main/markdown/gcp_ssh_vscode.md)
 * [Using tensorboard](https://colab.research.google.com/github/tensorflow/tensorboard/blob/master/docs/tbdev_getting_started.ipynb)
 
+## Random stuff
 
+* [Screenshot of how to split your v3-8 TPU VM into two 4-core machines](https://github.com/probml/probml-notebooks/blob/main/images/jax-tpu-split.png). This lets you run two separate JAX processes at once, in different jupyter notebooks (eg if working on two projects simultaneously). The magic incantation is from [this gist](https://gist.github.com/skye/f82ba45d2445bb19d53545538754f9a3) written by Skye Wanderman-Milne and is reproduced below.
+```
+# 2x 2 chips (4 cores) per process:
+os.environ["TPU_CHIPS_PER_HOST_BOUNDS"] = "1,2,1"
+os.environ["TPU_HOST_BOUNDS"] = "1,1,1"
+# Different per process:
+os.environ["TPU_VISIBLE_DEVICES"] = "0,1" # Change to "2,3" for the second machine
+# Pick a unique port per process
+os.environ["TPU_MESH_CONTROLLER_ADDRESS"] = "localhost:8476"
+os.environ["TPU_MESH_CONTROLLER_PORT"] = "8476"
+```
