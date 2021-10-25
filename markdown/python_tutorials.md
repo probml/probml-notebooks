@@ -17,6 +17,8 @@ Below we list some excellent tutorials on Python.
 |[Datascience from scrtach](https://www.oreilly.com/library/view/data-science-from/9781492041122/)| Minimalistic Python implementations of standard ML methods |
 |[Duke's BIOS821 course](http://people.duke.edu/~ccc14/bios-821-2017/index.html)| Intro to data analysis with Python |
 |[Duke's STA663 course](http://people.duke.edu/~ccc14/sta-663-2019/)| Intro to statistical computing with Python |
+|http://scipy-lectures.org/| Scipy tutorials |
+|[JAX](https://github.com/google/jax)| Accelerated numpy plus autograd | 
 
 ## Code editors
 
