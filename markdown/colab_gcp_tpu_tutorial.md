@@ -22,9 +22,6 @@ os.environ["TPU_CHIPS_PER_HOST_BOUNDS"] = "1,2,1"
 os.environ["TPU_HOST_BOUNDS"] = "1,1,1"
 # Different per process:
 os.environ["TPU_VISIBLE_DEVICES"] = "0,1" # Change to "2,3" for the second machine
-# Pick a unique port per process
-os.environ["TPU_MESH_CONTROLLER_ADDRESS"] = "localhost:8476"
-os.environ["TPU_MESH_CONTROLLER_PORT"] = "8476"
 ```
 
 * [Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html)
