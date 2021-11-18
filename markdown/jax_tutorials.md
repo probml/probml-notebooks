@@ -4,6 +4,13 @@
 [JAX](https://github.com/google/jax) is a  version of NumPy that runs fast on CPU, GPU and TPU, by compiling down to XLA. It also has an excellent automatic differentiation library, extending the earlier [autograd](https://github.com/hips/autograd) package, which makes it easy to compute higher order derivatives, per-example gradients (instead of aggregated gradients), and gradients of complex code (e.g., optimize an optimizer).
 The JAX interface is almost identical to NumPy (by design), but with some small differences, and lots of additional features.
  More details can be found in the other tutorials listed below.
+ 
+ Here is a one-slide summary of JAX from a [recent 10 minute overview talk](https://youtu.be/WdTeDXsOSj4) by Jake Vanderplas.  
+ <img src="https://github.com/probml/probml-notebooks/blob/main/images/jax-summary.png"
+     alt="Jax summary slide"
+     style="float: left; margin-right: 10px;" />
+
+ 
 
 ## Tutorials (blog posts / notebooks)
 
