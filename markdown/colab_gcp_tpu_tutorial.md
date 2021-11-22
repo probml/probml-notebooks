@@ -27,3 +27,4 @@ os.environ["TPU_VISIBLE_DEVICES"] = "0,1" # Change to "2,3" for the second machi
 * [Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html)
 * [Jax on CPUs](https://github.com/google/jax/issues/1598#issuecomment-548031576)
 * [pmap on CPUs](https://github.com/google/jax/issues/1408)
+* `pip install git+https://github.com/blackjax-devs/blackjax`
