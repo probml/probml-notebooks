@@ -7,7 +7,7 @@
 <!-- Add colab link that redirects to your notebook -->
 <!-- 
 
-For example if your notebook is : 
+For example, if your notebook is : 
 
 https://github.com/codeboy5/probml-notebooks/blob/add-densenet-jax/notebooks-d2l/densenet_jax.ipynb  
 
@@ -21,14 +21,14 @@ https://colab.research.google.com/github/codeboy5/probml-notebooks/blob/add-dens
 
 <!-- Link the issue you are solving -->
 
-<!-- If issue is from this repo, include directly with issue number -->
+<!-- If the issue is from this repo, include directly with issue number -->
 <!-- For example: 
 
 #12
 
 -->
 
-<!-- If issue is from another repo, you can include it using the regular linking mechanism -->
+<!-- If the issue is from another repo, you can include it using the regular linking mechanism -->
 <!-- For example:
 
 [Issue title](Issue link) 
@@ -37,7 +37,7 @@ https://colab.research.google.com/github/codeboy5/probml-notebooks/blob/add-dens
 
 ### Steps
 
-<!-- If the task is complicated, you can specify each step using check boxes so that everyone can understand what you have done and what you are going to complete. -->
+<!-- If the task is complicated, you can specify each step using checkboxes so that everyone can understand what you have done and what you are going to complete. -->
 <!-- For example:
 
 - [ ] Step1
@@ -57,4 +57,4 @@ Refer to this template for example: https://gist.github.com/patel-zeel/28a101009
 
 ## Potential problems/Important remarks
 
-<!-- If you have any import remarks  for the reviewers to look at closer,  you can write them in detail here.  -->
+<!-- If you have any important remarks for the reviewers to look at closer,  you can write them in detail here.  -->
