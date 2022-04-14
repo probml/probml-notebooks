@@ -18,6 +18,7 @@ Below we list some excellent tutorials on Python.
 |[Duke's BIOS821 course](http://people.duke.edu/~ccc14/bios-821-2017/index.html)| Intro to data analysis with Python |
 |[Duke's STA663 course](http://people.duke.edu/~ccc14/sta-663-2019/)| Intro to statistical computing with Python |
 |http://scipy-lectures.org/| Scipy tutorials |
+|[Book on matplotlib](https://github.com/rougier/scientific-visualization-book) | Data visualization with Python |
 |[JAX](https://github.com/google/jax)| Accelerated numpy plus autograd | 
 
 ## Code editors
