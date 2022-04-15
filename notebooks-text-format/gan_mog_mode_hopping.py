@@ -99,7 +99,7 @@ def real_data(batch_size):
 #@title ODE-integrators
 def euler_step(func, y0, f0, t0, dt):
   # Euler update
-  y1 = jax.tree_multimap(lambda u, v: dt * v + u, y0, f0)
+  y1 = jax.tree_map(lambda u, v: dt * v + u, y0, f0)
   return y1
 
 def runge_kutta_step(func, y0, f0, t0, dt):
@@ -114,14 +114,14 @@ def runge_kutta_step(func, y0, f0, t0, dt):
 
   def body_fun(i, k):
     ti = t0 + dt * alpha[i-1]
-    yi = jax.tree_multimap(lambda u, v: u + dt * jnp.tensordot(beta[i-1, :], v, axes=1), y0, k)
+    yi = jax.tree_map(lambda u, v: u + dt * jnp.tensordot(beta[i-1, :], v, axes=1), y0, k)
     ft = func(yi, ti)
-    return jax.tree_multimap(lambda x, y: x.at[i, :].set(y), k, ft)
+    return jax.tree_map(lambda x, y: x.at[i, :].set(y), k, ft)
   k = jax.tree_map(lambda f: jnp.zeros((4,) + f.shape,
                                        f.dtype).at[0, :].set(f), f0)
   k = lax.fori_loop(1, 4, body_fun, k)
 
-  y1 = jax.tree_multimap(lambda u, v: dt * jnp.tensordot(c_sol, v, axes=1) + u, y0, k)
+  y1 = jax.tree_map(lambda u, v: dt * jnp.tensordot(c_sol, v, axes=1) + u, y0, k)
   return y1
 
 
@@ -272,9 +272,9 @@ def ode_update(i, disc_params, gen_params, real_examples, latents):
       grad_gen_fn, gen_params, gen_grad, 0., delta_t)
   new_disc_params = ODEINT[odeint](
       grad_disc_fn, disc_params, disc_grad, 0., delta_t)
-  new_disc_params = jax.tree_multimap(
+  new_disc_params = jax.tree_map(
       lambda x, y: x + delta_t * reg_param * y, new_disc_params, disc_gen_grad)
-  new_gen_params = jax.tree_multimap(
+  new_gen_params = jax.tree_map(
       lambda x, y: x + delta_t * reg_param* y, new_gen_params, gen_disc_grad)
   return new_disc_params, new_gen_params, -dloss, -gloss
 
