@@ -1318,7 +1318,7 @@ t2 = tree_util.tree_map(lambda x: x*x, t1)
 print('square each element', t2)
 
 
-t3 = tree_util.tree_multimap(lambda x,y: x+y, t1, t2)
+t3 = tree_util.tree_map(lambda x,y: x+y, t1, t2)
 print('t1+t2', t3)
 
 # + [markdown] id="TpxCulXHEQ1_"
@@ -1328,12 +1328,12 @@ print('t1+t2', t3)
 
 data = [dict(t=1, obs='a', val=-1), dict(t=2, obs='b', val=-2), dict(t=3, obs='c', val=-3)]
 
-data2 = jax.tree_multimap(lambda d0, d1, d2: list((d0, d1, d2)),
+data2 = jax.tree_map(lambda d0, d1, d2: list((d0, d1, d2)),
                           data[0], data[1], data[2])
 print(data2)
 
 def join_trees(list_of_trees):
-  d = jax.tree_multimap(lambda *xs: list(xs), *list_of_trees)
+  d = jax.tree_map(lambda *xs: list(xs), *list_of_trees)
   return d
 
 print(join_trees(data))
@@ -1411,14 +1411,14 @@ alpha = 0.3 # Gradient step size
 print('Loss for "true" W,b: ', mse_pytree(params_true))
 for i in range(101):
   gradients = jax.grad(mse_pytree)(params)
-  params = jax.tree_multimap(lambda old,grad: old-alpha*grad, params, gradients)
+  params = jax.tree_map(lambda old,grad: old-alpha*grad, params, gradients)
   if (i%10==0):
     print("Loss step {}: ".format(i), mse_pytree(params))
 
 
 
 # + colab={"base_uri": "https://localhost:8080/"} id="T_tNi1V38VAo" outputId="28ff2151-6341-4a9f-a39f-242ce46e0c53"
-print(jax.tree_multimap(lambda x,y: np.allclose(x,y, atol=1e-1), params, params_true))
+print(jax.tree_map(lambda x,y: np.allclose(x,y, atol=1e-1), params, params_true))
 
 
 # + [markdown] id="jfHqKwgl9T2Q"
@@ -1475,7 +1475,7 @@ LEARNING_RATE = 0.0001
 @jax.jit
 def update(params, x, y):
   grads = jax.grad(loss_fn)(params, x, y)
-  return jax.tree_multimap(
+  return jax.tree_map(
       lambda p, g: p - LEARNING_RATE * g, params, grads)
 
 np.random.seed(0)

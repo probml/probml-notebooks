@@ -129,7 +129,7 @@ keys = [dev_array for dev_array in split(rng_key, len(vocab))]
 hmms = {word: Word(word, p1, p2, p3, n_char, "all", mixing_coeffs=cbm_em.model.mixture_distribution.probs,
                       initial_probs=cbm_em.model.components_distribution.distribution.probs, n_mix=n_mix) for word in vocab}
 
-samples = jax.tree_multimap(lambda word, key: hmms[word].n_sample(n_misspelled, key), vocab, keys)
+samples = jax.tree_map(lambda word, key: hmms[word].n_sample(n_misspelled, key), vocab, keys)
 
 # + id="7VXVsobcg_KO" colab={"base_uri": "https://localhost:8080/"} outputId="3e915a79-7f5c-4131-d6ee-97f11c83d86f"
 decoded_words = vmap(decode, in_axes = (0, None, None))(jnp.array(samples)[:, :, :, -1].reshape((n_misspelled * len(vocab), -1)), n_char + 1, "all")
