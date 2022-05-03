@@ -1,6 +1,7 @@
 # probml-notebooks
 
-This is a set of Python 3 notebooks
-my book series [Probabilistic Machine Learning](https://probml.github.io/pml-book/).
-This is work in progress, so expect rough edges.
+
+As of 2022-05-03, this repo is deprecated, and all content has been copied to
+https://github.com/probml/pyprobml/tree/master/notebooks.
+
 
